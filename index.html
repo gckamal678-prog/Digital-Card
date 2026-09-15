@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ne">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,7 +9,7 @@
     <style>
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: #0b0b0b;
+            background: radial-gradient(circle, #1a1a1a 0%, #050505 100%);
             display: flex;
             justify-content: center;
             align-items: center;
@@ -17,15 +17,16 @@
             margin: 0;
         }
         .card-container {
-            background: linear-gradient(145deg, #1a1a1a, #0d0d0d);
-            width: 380px;
+            background: linear-gradient(145deg, rgba(26, 26, 26, 0.9), rgba(10, 10, 10, 0.95));
+            width: 390px;
             padding: 35px 25px;
-            border-radius: 25px;
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.7), inset 0 0 15px rgba(212, 175, 55, 0.2);
+            border-radius: 28px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.8), inset 0 0 20px rgba(212, 175, 55, 0.15);
             border: 2px solid #d4af37;
             text-align: center;
             box-sizing: border-box;
             color: #fff;
+            backdrop-filter: blur(10px);
         }
         .avatar-box {
             position: relative;
@@ -35,7 +36,7 @@
             border-radius: 50%;
             padding: 4px;
             background: linear-gradient(45deg, #d4af37, #fff, #d4af37);
-            box-shadow: 0 0 20px rgba(212, 175, 55, 0.5);
+            box-shadow: 0 0 25px rgba(212, 175, 55, 0.6);
         }
         .avatar-box img {
             width: 100%;
@@ -47,7 +48,7 @@
         .profile-name {
             font-size: 22px;
             font-weight: bold;
-            letter-spacing: 1px;
+            letter-spacing: 1.2px;
             color: #d4af37;
             margin-bottom: 5px;
             display: flex;
@@ -60,13 +61,14 @@
             color: #d4af37;
         }
         .profile-title {
-            font-size: 13px;
-            color: #aaa;
-            letter-spacing: 1.5px;
+            font-size: 12px;
+            color: #bbb;
+            letter-spacing: 2px;
             text-transform: uppercase;
             margin-bottom: 25px;
+            font-weight: 500;
         }
-        /* Vertical List Style for All Items */
+        /* Vertical Link List Style */
         .link-list {
             display: flex;
             flex-direction: column;
@@ -74,18 +76,19 @@
             margin-bottom: 20px;
         }
         .link-item {
-            background: rgba(255, 255, 255, 0.05);
-            border: 1px solid rgba(212, 175, 55, 0.3);
-            padding: 12px 15px;
-            border-radius: 12px;
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(212, 175, 55, 0.25);
+            padding: 13px 18px;
+            border-radius: 14px;
             display: flex;
             align-items: center;
             gap: 15px;
-            color: #ccc;
+            color: #ddd;
             text-decoration: none;
             font-size: 14px;
+            font-weight: 400;
             transition: all 0.3s ease;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
             text-align: left;
         }
         .link-item i {
@@ -93,16 +96,21 @@
             color: #d4af37;
             width: 25px;
             text-align: center;
+            transition: transform 0.3s ease;
         }
         .link-item:hover {
             background: rgba(212, 175, 55, 0.15);
             border-color: #d4af37;
             color: #fff;
-            transform: translateY(-2px);
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(212, 175, 55, 0.4);
+        }
+        .link-item:hover i {
+            transform: scale(1.2);
         }
         .footer-text {
             font-size: 10px;
-            color: #666;
+            color: #777;
             letter-spacing: 1px;
             margin-top: 15px;
         }
@@ -119,17 +127,17 @@
         <div class="profile-name">
             KAMAL G.C. <i class="fa-solid fa-certificate" title="VIP Verified"></i>
         </div>
-        <div class="profile-title">KAMAL G.C.</div>
+        <div class="profile-title">VIP Digital Creator</div>
 
         <!-- Vertical Link List (Top to Bottom) -->
         <div class="link-list">
             <!-- 1. Location -->
             <a href="https://maps.app.goo.gl/Txq4BzhCLZWK36e3A" target="_blank" class="link-item">
-                <i class="fa-solid fa-location-dot"></i> शिवराज ९ अञ्चलपुर
+                <i class="fa-solid fa-location-dot"></i> SHIVARAJ-9, ANCHALPUR
             </a>
             <!-- 2. WhatsApp -->
             <a href="https://wa.me/9779821406500" target="_blank" class="link-item">
-                <i class="fa-brands fa-whatsapp"></i> +9779821406500
+                <i class="fa-brands fa-whatsapp"></i> +977 9821406500
             </a>
             <!-- 3. Email -->
             <a href="mailto:info@kamalgc.com.np" class="link-item">
@@ -137,23 +145,23 @@
             </a>
             <!-- 4. Facebook Profile -->
             <a href="https://www.facebook.com/share/1C2yZkz7MS" target="_blank" class="link-item">
-                <i class="fa-brands fa-facebook-f"></i> facebook
+                <i class="fa-brands fa-facebook-f"></i> Facebook
             </a>
             <!-- 5. Facebook Page -->
             <a href="https://www.facebook.com/share/19H7Jj6U8y" target="_blank" class="link-item">
-                <i class="fa-brands fa-facebook"></i> facebook page
+                <i class="fa-brands fa-facebook"></i> Facebook Page
             </a>
             <!-- 6. Instagram -->
             <a href="https://www.instagram.com/chhetrikamal97?stkn=MTgzcml5czdlaHV2eQ" target="_blank" class="link-item">
-                <i class="fa-brands fa-instagram"></i> instagram
+                <i class="fa-brands fa-instagram"></i> Instagram
             </a>
             <!-- 7. YouTube -->
             <a href="https://youtube.com/@sk_official97?si=ayrDWurrapho9GxK" target="_blank" class="link-item">
-                <i class="fa-brands fa-youtube"></i> youtube
+                <i class="fa-brands fa-youtube"></i> YouTube
             </a>
-            <!-- 8. पाठशाला (Kids Subdomain) -->
+            <!-- 8. Paathshala (Kids Subdomain) -->
             <a href="https://kids.kamalgc.com.np" target="_blank" class="link-item">
-                <i class="fa-solid fa-graduation-cap"></i> पाठशाला
+                <i class="fa-solid fa-graduation-cap"></i> Paathshala
             </a>
             <!-- 9. Digital Notebook (DN Subdomain) -->
             <a href="https://dn.kamalgc.com.np" target="_blank" class="link-item">
@@ -162,7 +170,7 @@
         </div>
 
         <div class="footer-text">
-            &copy; 2026 kamalgc.com.np All Right Reserved
+            &copy; 2026 kamalgc.com.np All Rights Reserved
         </div>
     </div>
 
